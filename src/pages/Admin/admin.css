@@ -1,0 +1,168 @@
+#admin{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.AHeader{
+    color: #0b54d2;
+    padding-left: 30px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 50px;
+    box-shadow: 5px 5px 5px 5px solid #0b54d2;
+    display: flex;
+    justify-content: space-between;
+}
+#btn-header{
+    position: absolute;
+    width: fit-content;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    padding: 3px 15px;
+    height: 35px;
+    top: 70%;
+    border-radius: 10px;
+    margin-right: 15px;
+    background-color: #0b54d2;
+    transition: 1s ease;
+}
+#btn-header:hover{
+    background-color: transparent;
+    border: blue solid;
+    color: black;
+}
+
+.SideMenu{
+    transition: 1s ease;
+    /* display: flex;
+    flex-direction: column; */
+    padding-left: 5px;
+    padding-right: 45px;
+    margin-top: 7%;
+    flex-grow: 1;
+    height: 90vh;
+    border-right: solid 1px grey;
+    justify-content: space-around;
+}
+#admin_body{
+    flex-grow: 6;
+    padding-left: 25px;
+    margin-top: 9%;
+}
+/* ------------------------------------------------------------------------- */
+
+.SideMenu ul{
+    padding-left: 25px;
+    list-style: none;
+}
+.SideMenu ul li{
+    margin-bottom: 10px;
+}
+.SideMenu ul li a{
+    text-decoration: none;
+    color: #0b54d2;
+}
+
+/******************************************************/
+.del_ubtn{
+    margin-right: 15px;
+    cursor: pointer;
+    color: red;
+}
+th:hover{
+    background-color: transparent;
+    border-color: orange;
+    transition: 0.5s ease;
+}
+
+.del-btn:hover{
+    background-color: red;
+}
+.del-btn:hover span{
+color: white;
+}
+.edit-btn:hover{
+    background-color: blue;
+}
+.edit-btn:hover a{
+    color: white;
+}
+
+
+th,td{
+    /* text-align: left; */
+    border: black 1px solid;
+    transition: 1s ease;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 15px;
+    transition: 0.5s ease;
+}
+td a{
+    text-decoration: none;
+    color: blue;
+}
+thead tr th{
+    background-color: orange;
+}
+
+
+
+.User,.Cocktail, .UserAdd,.CocktailAdd,.UserEdit,.CocktailEdit{
+    font-weight: 800;
+}
+.User table, .Cocktail table{
+    font-weight: 400;
+
+}
+
+/* formulaire d'édition et d'ajout d'un utilisateur ou cocktail */
+.CocktailEdit form, .UserEdit form, .UserAdd form, .CocktailAdd form{
+    margin-top: 40px;
+    margin-left: 10%;
+    padding:30px 100px;
+    border: none ;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 0 10px 2px rgb(89, 88, 86);
+    align-items: start;
+    
+}
+/* .CocktailEdit form:hover, .UserEdit form:hover, .UserAdd form:hover, .CocktailAdd form:hover{
+    box-shadow: 0 0 10px 2px orange;
+} */
+
+
+.group{
+    display: grid;
+    margin-bottom: 20px;
+}
+.group label{
+    margin-right: 10px;
+    text-align: left;
+}
+
+.group input{
+    height: 30px;
+}
+.group button{
+    width: 150px;
+    margin-left: 5px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 0 3px 0.4px orange;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+/* .group button:hover{
+    background-color: transparent;
+    color: blue;
+    box-shadow: 0 0 3px 0.4px blue;
+} */
+

@@ -1,0 +1,52 @@
+.pheader {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-bottom: solid 1px grey;
+    background-color: blue;
+    height: 10vh;
+    margin-top: 0;
+    color: white;
+}
+nav{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.pheader ul{
+    margin-bottom: 15px;
+    list-style: none;
+    padding: 0px;
+}
+.pheader ul li{
+    display: inline-block;
+    margin-right: 30px;
+}
+.pheader ul li a{
+    color: white;
+    text-decoration: none;
+}
+.bn{
+    margin: 0;
+    width: 100px;
+    padding: 5px 20px;
+    text-align: center;
+    color: blue;
+    border-radius: 20px;
+    font-weight: 600;
+    border: none;
+}
+.btn-deconn{
+ width: fit-content;
+ margin-bottom: 8px;
+ margin-left: 0;
+}
+
+
+.btn-none{
+    display: none;
+
+}
