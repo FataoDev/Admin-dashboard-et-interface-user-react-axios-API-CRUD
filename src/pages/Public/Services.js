@@ -1,28 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { cocktailService } from '@/_services/cocktail_service';
-import { useParams } from 'react-router-dom';
+import image from "@/assets/drapeau.jpg";
+import { cocktailService } from "@/_services/cocktail_service";
+import { useParams } from "react-router-dom";
 
 const Service = () => {
-    const [cocktail, setCocktail] = useState({})
-    let {cid} = useParams()
+  const [cocktail, setCocktail] = useState({});
+  let { cid } = useParams();
 
-    // Récupération du cocktail depuis l'API
-    useEffect(() => {
-        cocktailService.getCocktail(cid)
-            .then(res => setCocktail(res.data.data))
-            .catch(err => console.log(err))
-        // eslint-disable-next-line
-    }, [])
+  // Récupération du cocktail depuis l'API
+  useEffect(() => {
+    cocktailService
+      .getCocktail(cid)
+      .then((res) => setCocktail(res.data.data))
+      .catch((err) => console.log(err));
+    // eslint-disable-next-line
+  }, []);
 
-    return (
-        <div className='service'>
-            <img src={'https://picsum.photos/1200/800?random=' + cocktail.id} alt={cocktail.nom} />
-            <div>{cocktail.nom}</div>
-            <div>{cocktail.description}</div>
-            <div>{cocktail.recette}</div>
-        </div>
-    );
+  return (
+    <div className="service">
+      <img
+        src={
+          image
+          // 'https://picsum.photos/1200/800?random=' + cocktail.id
+        }
+        alt={cocktail.nom}
+      />
+      <div className="title">Nom : {cocktail.nom}</div>
+      <div>Description : {cocktail.description}</div>
+      <div>Recette : {cocktail.recette}</div>
+    </div>
+  );
 };
 
 export default Service;

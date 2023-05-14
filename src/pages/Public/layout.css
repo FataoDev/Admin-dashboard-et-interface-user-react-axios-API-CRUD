@@ -1,12 +1,28 @@
 .home{
     display:flex;
+
     gap: 13px;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+
+.service{
+    margin: 10px 0 0 20px;
+    max-width: 450px;
+    height: 450px;
+}
+
 .service img{
-    height:180px;
-    width:100%;
     object-fit: cover;
+    width:100%;
+    border: red 5px solid;
+    border-radius: 30px;
+}
+.service div{
+    font-size: 20px;
+}
+
+.service div.title{
+    font-weight: 900;
 }

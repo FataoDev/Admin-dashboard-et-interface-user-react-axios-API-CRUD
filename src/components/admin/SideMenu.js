@@ -11,7 +11,7 @@ const SideMenu = () => {
   return (
     <div className="SideMenu">
       <ul>
-        <li>
+        <li className="dashboard-accueil">
           {" "}
           <Link to="/">Accueil</Link>
         </li>

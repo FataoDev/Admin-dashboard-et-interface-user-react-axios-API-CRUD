@@ -36,6 +36,10 @@ const Cocktail = () => {
 
   return (
     <div className="Cocktail">
+      <Link to={"/admin/dashboard"} className="retour">
+        Retour
+      </Link>
+      <br />
       Cocktail liste
       <table>
         <thead>

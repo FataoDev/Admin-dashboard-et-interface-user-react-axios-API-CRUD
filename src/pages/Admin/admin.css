@@ -45,7 +45,7 @@
     padding-right: 45px;
     margin-top: 7%;
     flex-grow: 1;
-    height: 90vh;
+    height: 85.6vh;
     border-right: solid 1px grey;
     justify-content: space-around;
 }
@@ -60,6 +60,14 @@
     padding-left: 25px;
     list-style: none;
 }
+
+.SideMenu ul .dashboard-accueil{
+    background: white;
+    width: fit-content;
+    padding: 2px 15px;
+    border-radius: 5px;
+}
+
 .SideMenu ul li{
     margin-bottom: 10px;
 }
@@ -168,3 +176,76 @@ thead tr th{
     box-shadow: 0 0 3px 0.4px blue;
 } */
 
+
+
+
+/* ================= DESIGN nombre d'utilisateur du dashboard =====================  */
+.dashboard-header{
+    display:flex;
+    gap: 20px;
+}
+
+.nombre{
+    background-color: transparent;
+    /* border: white 2px solid; */
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 800;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 15px;
+    background-color: rgb(128, 122, 213);
+    transition: 0.5s ease;
+}
+
+.nombre:hover{
+    background: none;
+    box-shadow: 0 0 5px 3px rgb(128, 122, 213);
+    /* box-shadow: none; */
+}
+
+.nombre:hover .title{
+    color: black;
+}
+
+
+.nombre .title{
+    font-size: 15px;
+    justify-content: start;
+    margin-left: -200px;
+    color: blue;
+    font-weight: 500;
+}
+
+.nombre .voir-plus{
+    background-color: rgb(217, 214, 214);
+    border: none;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.nombre:hover .voir-plus, .nombre:hover .voir-plus a{
+    color: white;
+    background-color: rgb(128, 122, 213);
+}
+
+
+.nombre .voir-plus a{
+    font-weight: 500;
+    color: blue;
+    text-decoration: none;
+}
+
+.retour{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(90, 90, 90);
+    padding: 3px 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}

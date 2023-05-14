@@ -38,7 +38,10 @@ const User = () => {
   // }
   return (
     <div className="User">
-      User List <br />
+      <Link to={"/admin/dashboard"} className="retour">
+        Retour
+      </Link>
+      <br /> User List <br />
       {/* <button onClick={()=>infos(2)}>User 2</button>
             <button onClick={()=>infos(3)}>User 3</button>
             <button onClick={()=>infos(4)}>User 4</button> */}
