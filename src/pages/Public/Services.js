@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import image from "@/assets/drapeau.jpg";
+import image from "@/assets/casque.jpg";
 import { cocktailService } from "@/_services/cocktail_service";
 import { Link, useParams } from "react-router-dom";
 
@@ -36,7 +36,11 @@ const Service = () => {
         <div className="description">
           <div className="title">Nom : {cocktail.nom}</div>
           <div>Description : {cocktail.description}</div>
-          <div>Prix "FCFA" : {cocktail.prix}</div>
+          <div>Prix : {cocktail.prix} FCFA</div>
+          <div className="qtt">
+            <div>Quantité :</div>
+            <input type="number" name="quanitité" />
+          </div>
           <button className="btn">Acheter</button>
         </div>
       </div>

@@ -1,15 +1,19 @@
 .card_article{
-    max-width: 150px;
-    height: 150px;
+    width: 200px;
+    height: auto;
     margin-top: 15px;
     /* transform: scale(1); */
     transition: 0.5s ease;
+    box-shadow:0 0 3px 1px black;
+    border-radius: 10px;
+    
 }
 
 .card_article img{
+    border-radius: 10px;
     object-fit: cover;
     width:100%;
-    border-radius: 30px;
+    height:100%;
 }
 
 .card_link{
@@ -17,12 +21,21 @@
 }
 
 .card_article div{
+    display:none;
+    position:absolute;
     font-weight: 700;
     /* position: relative; */
-    margin: -60px 0 0 3px;
+    margin: -20 0px 0 0 3px;
+    background-color:rgb(66, 65, 65);
     color: white;
+    padding:3px 15px;
+    transition: 0.5s ease;
+    border-radius:5px;
 }
 
 .card_article:hover{
-    transform: scale(1.2);
+    transform: scale(1.15);
+}
+.card_article:hover div{
+    display:block;
 }

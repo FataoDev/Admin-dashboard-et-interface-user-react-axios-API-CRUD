@@ -1,9 +1,30 @@
 .home{
-    display:flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    margin:20px 20px 0 20px;
 }
+
+.home div:nth-Child(1){
+    display:flex;
+    font-weight:800;
+    gap:10px;
+}
+
+.home .titre div:nth-Child(1){
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    font-size:30px;
+    margin-top:-10px;
+    
+}
+
+.home-produits{
+    display:flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
 
 .name_user,.name_default{
     font-size:26px;
@@ -13,7 +34,7 @@
 .service{
     display: inline-block;
     margin: 10px 0 0 20px;
-    width: 100%;
+    width: 80%;
     /* max-width: 450px; */
     height: 77vh;
     gap: 10px;
@@ -31,11 +52,14 @@
 .description{
     margin-left: 10px;
 }
+.description div{
+    margin-bottom:15px;
+}
 
 .ckt_image{
     object-fit: cover;
     width:50%;
-    border: none;
+    border: black 2px solid;
     border-radius: 30px;
 }
 .service div{
@@ -44,4 +68,20 @@
 
 .service div.title{
     font-weight: 900;
+}
+
+
+.service .description div.qtt{
+    display:flex;
+    gap:10px;
+}
+
+.qtt input{
+    height:30px;
+    width:140px;
+    font-size:20px;
+    text-align:center;
+    font-weight:700;
+    border:black 2px solid;
+    border-radius:5px;
 }

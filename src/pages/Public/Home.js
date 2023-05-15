@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { cocktailService } from "@/_services";
 import Card from "@/components/public/Card";
-import image from "@/assets/drapeau.jpg";
+import image from "@/assets/casque.jpg";
 
 const Home = () => {
   const [cocktails, setCocktails] = useState([]);
@@ -20,9 +20,16 @@ const Home = () => {
 
   return (
     <div className="home">
-      {cocktails.map((ckt, id) => (
-        <Card key={id} Fatao={ckt} image={image} />
-      ))}
+      <div className="titre">
+        <div>-</div>
+        <div>Listes des produits</div>
+      </div>
+
+      <div className="home-produits">
+        {cocktails.map((ckt, id) => (
+          <Card key={id} Fatao={ckt} image={image} />
+        ))}
+      </div>
     </div>
   );
 };

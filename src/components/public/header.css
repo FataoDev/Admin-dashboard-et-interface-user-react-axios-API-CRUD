@@ -4,7 +4,7 @@
     text-align: center;
     border-bottom: solid 1px grey;
     background-color: blue;
-    height: 10vh;
+    height: 12vh;
     margin-top: 0;
     color: white;
 }
@@ -31,8 +31,8 @@ nav{
 }
 .bn{
     margin: 0;
-    width: 100px;
-    padding: 5px 20px;
+    width: 60px;
+    padding: 4px 20px;
     text-align: center;
     color: blue;
     border-radius: 20px;
@@ -41,7 +41,7 @@ nav{
 }
 .btn-deconn{
  width: fit-content;
- margin-bottom: 8px;
+ margin-bottom: 20px;
  margin-left: 0;
 }
 
