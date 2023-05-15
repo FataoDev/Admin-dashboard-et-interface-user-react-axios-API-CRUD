@@ -1,0 +1,15 @@
+.error{
+    background-color:rgb(143, 143, 163);
+    height:100vh;
+    color:rgb(186, 33, 33);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:15px;
+}
+
+.error div{
+    font-size:40px;
+    font-weight:800;
+}
