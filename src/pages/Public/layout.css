@@ -1,22 +1,41 @@
 .home{
     display:flex;
-
-    gap: 13px;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-
-.service{
-    margin: 10px 0 0 20px;
-    max-width: 450px;
-    height: 450px;
+.name_user,.name_default{
+    font-size:26px;
+    font-weight:600;
 }
 
-.service img{
+.service{
+    display: inline-block;
+    margin: 10px 0 0 20px;
+    width: 100%;
+    /* max-width: 450px; */
+    height: 77vh;
+    gap: 10px;
+}
+
+.container_retour{
+    margin-bottom: 10px;
+}
+
+.service .container_cocktail{
+    display: flex;
+    /* justify-content: start; */
+}
+
+.description{
+    margin-left: 10px;
+}
+
+.ckt_image{
     object-fit: cover;
-    width:100%;
-    border: red 5px solid;
+    width:50%;
+    border: none;
     border-radius: 30px;
 }
 .service div{

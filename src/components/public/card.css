@@ -1,6 +1,9 @@
 .card_article{
     max-width: 150px;
     height: 150px;
+    margin-top: 15px;
+    /* transform: scale(1); */
+    transition: 0.5s ease;
 }
 
 .card_article img{
@@ -14,6 +17,12 @@
 }
 
 .card_article div{
-    position: absolute;
-    margin: -30px 0 0 40px;
+    font-weight: 700;
+    /* position: relative; */
+    margin: -60px 0 0 3px;
+    color: white;
+}
+
+.card_article:hover{
+    transform: scale(1.2);
 }

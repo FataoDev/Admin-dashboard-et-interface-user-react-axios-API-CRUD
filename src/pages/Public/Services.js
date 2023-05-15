@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import image from "@/assets/drapeau.jpg";
 import { cocktailService } from "@/_services/cocktail_service";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Service = () => {
   const [cocktail, setCocktail] = useState({});
@@ -19,16 +19,27 @@ const Service = () => {
 
   return (
     <div className="service">
-      <img
-        src={
-          image
-          // 'https://picsum.photos/1200/800?random=' + cocktail.id
-        }
-        alt={cocktail.nom}
-      />
-      <div className="title">Nom : {cocktail.nom}</div>
-      <div>Description : {cocktail.description}</div>
-      <div>Recette : {cocktail.recette}</div>
+      <div className="container_retour">
+        <Link to={"/"} className="retour">
+          Retour
+        </Link>
+      </div>
+      <div className="container_cocktail">
+        <img
+          src={
+            image
+            // 'https://picsum.photos/1200/800?random=' + cocktail.id
+          }
+          alt={cocktail.nom}
+          className="ckt_image"
+        />
+        <div className="description">
+          <div className="title">Nom : {cocktail.nom}</div>
+          <div>Description : {cocktail.description}</div>
+          <div>Prix "FCFA" : {cocktail.prix}</div>
+          <button className="btn">Acheter</button>
+        </div>
+      </div>
     </div>
   );
 };

@@ -71,11 +71,11 @@ const CocktailEdit = () => {
           />
         </div>
         <div className="group">
-          <label htmlFor="recette">Recette</label>
+          <label htmlFor="prix">Prix</label>
           <input
             type="text"
-            name="recette"
-            value={cocktail.recette}
+            name="prix"
+            value={cocktail.prix}
             onChange={onChange}
           />
         </div>

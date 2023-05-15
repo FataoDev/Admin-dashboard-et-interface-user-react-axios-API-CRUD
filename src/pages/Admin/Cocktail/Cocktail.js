@@ -23,15 +23,19 @@ const Cocktail = () => {
 
   // Gestion du bouton de suppression
   const delCocktail = (cocktailId) => {
-    cocktailService
-      .deleteCocktail(cocktailId)
-      .then((res) => {
-        // Mise à jour du state pour affichage
-        setCocktails((current) =>
-          current.filter((cocktail) => cocktail.id !== cocktailId)
-        );
-      })
-      .catch((err) => console.log(err));
+    // eslint-disable-next-line no-restricted-globals
+    const conf = confirm("Voulez vous supprimer ?");
+    if (conf) {
+      cocktailService
+        .deleteCocktail(cocktailId)
+        .then((res) => {
+          // Mise à jour du state pour affichage
+          setCocktails((current) =>
+            current.filter((cocktail) => cocktail.id !== cocktailId)
+          );
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   return (

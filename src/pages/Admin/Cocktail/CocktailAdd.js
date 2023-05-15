@@ -87,8 +87,8 @@ const CocktailAdd = () => {
           <input type="text" name="description" onChange={onChange} />
         </div>
         <div className="group">
-          <label htmlFor="recette">Recette</label>
-          <input type="text" name="recette" onChange={onChange} />
+          <label htmlFor="prix">Prix</label>
+          <input type="text" name="prix" onChange={onChange} />
         </div>
         {/* <div className="group">
           <label htmlFor="">Image :</label>
