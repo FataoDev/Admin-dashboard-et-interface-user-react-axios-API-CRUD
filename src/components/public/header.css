@@ -14,6 +14,7 @@ nav{
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    margin-right: 35px;
 }
 
 .pheader ul{
@@ -28,16 +29,23 @@ nav{
 .pheader ul li a{
     color: white;
     text-decoration: none;
+    font-weight: 700;
 }
 .bn{
     margin: 0;
-    width: 60px;
+    /* width: 60px; */
     padding: 4px 20px;
     text-align: center;
     color: blue;
     border-radius: 20px;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.bn:hover{
+    background-color: rgb(118, 118, 232);
+    color: white;
 }
 .btn-deconn{
  width: fit-content;
@@ -50,3 +58,111 @@ nav{
     display: none;
 
 }
+
+.toogle{
+    display: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    /* transition: 0.5s ease; */
+}
+.toogle div{
+    margin-bottom: 3px;
+    gap: 1px;
+    content: "";
+    width: 30px;
+    height: 5px;
+    color: white;
+    background-color: red;
+}
+
+
+
+
+
+
+/* ======================Media screen ==================================*/
+@media screen and (max-width:710px) {
+    ul{
+        display: none;
+    }
+
+    .pheader .active-nav li a{
+        font-size: 20px;
+    }
+
+    .pheader .active-nav{
+        display: grid;
+        right: 0;
+        top: 84px;
+        padding-top: 10px;
+        /* padding-bottom: 30px; */
+        width: 30%;
+        height: 40vh;
+        background-color: blue;
+        position: absolute;
+        border-radius: 10px;
+        /* gap: 15px; */
+        transition: 0.5s ease;
+        
+    }
+    .pheader ul li{
+        margin: 0;padding: 0;
+    }
+    .pheader ul li a{
+        transition: 0.5s ease;
+        display: flex;
+        border: white 1px solid;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 5px 2px rgb(237, 111, 111);
+        /* box-shadow: 0 3px 5px 2px rgb(103, 103, 239); */
+        /* height: fit-content; */
+    }
+
+    .pheader ul li:hover a{
+        background-color: rgb(138, 138, 222);
+        box-shadow: none;
+
+    }
+
+
+    .active-nav{
+        display: grid;
+    }
+
+    .toogle{
+        display: block;
+        position: absolute;
+        right: 25px;
+        top: 40px;
+    }
+    .pheader ul li a{
+        font-size: 10px;
+    }
+    .active{
+        top: 45px;
+    }
+
+    .active div{
+        transition: 0.5s ease;
+    }
+
+    .active div:nth-child(1){
+        transform: rotate(45deg);
+        margin-bottom: -5px;
+    }
+    .active div:nth-child(2){
+        transform: rotate(-45deg);
+    }
+    .active div:nth-child(3){
+        display: none;
+    }
+}
+

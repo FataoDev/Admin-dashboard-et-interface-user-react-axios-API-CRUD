@@ -14,6 +14,8 @@ const Header = () => {
   const ref_conn = useRef(null);
   const ref_user = useRef(null);
   const ref_default = useRef(null);
+  const toogle = useRef(null);
+  const toggle_nav = useRef(null);
 
   useEffect(() => {
     // ref.current.style.display = "block";
@@ -64,15 +66,39 @@ const Header = () => {
             O vision
           </div>
         </div>
-        <ul>
+        <ul ref={toggle_nav}>
           <li>
-            <Link to="/home">Accueil</Link>
+            <Link
+              to="/home"
+              onClick={() => {
+                toogle.current.classList.toggle("active");
+                toggle_nav.current.classList.toggle("active-nav");
+              }}
+            >
+              Accueil
+            </Link>
           </li>
           <li>
-            <Link to="/service">Service</Link>
+            <Link
+              to="/service"
+              onClick={() => {
+                toogle.current.classList.toggle("active");
+                toggle_nav.current.classList.toggle("active-nav");
+              }}
+            >
+              Service
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link
+              to="/contact"
+              onClick={() => {
+                toogle.current.classList.toggle("active");
+                toggle_nav.current.classList.toggle("active-nav");
+              }}
+            >
+              Contact
+            </Link>
           </li>
           {/* <li className="connexion">
             <Link to="/auth">connexion</Link>{" "}
@@ -94,6 +120,23 @@ const Header = () => {
           ref={ref}
           onClick={deconn}
         />
+        <div
+          className="toogle"
+          ref={toogle}
+          onClick={() => {
+            toogle.current.classList.toggle("active");
+            toggle_nav.current.classList.toggle("active-nav");
+            // if (toggle_nav.current.style.display === "grid") {
+            //   toggle_nav.current.style.display = "none";
+            // } else {
+            //   toggle_nav.current.style.display = "grid";
+            // }
+          }}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </nav>
     </header>
   );
