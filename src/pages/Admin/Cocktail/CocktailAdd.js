@@ -8,13 +8,6 @@ const CocktailAdd = () => {
   const [prix, setPrix] = useState("");
   const [image, setImage] = useState("");
 
-  // const cocktail = {
-  //   nom: nom,
-  //   description: description,
-  //   recette: recette,
-  //   image: image,
-  // };
-
   // const [cocktail, setCocktail] = useState([]);
   let navigate = useNavigate();
 
@@ -42,11 +35,6 @@ const CocktailAdd = () => {
         }
       }
     }
-
-    // setCocktail({
-    //   ...cocktail,
-    //   [e.target.name]: e.target.value,
-    // });
   };
 
   // Gestionnaire de soumission du formulaire
