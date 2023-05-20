@@ -44,7 +44,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="nombre cocktails-nombre">
-          <div className="title">Cocktails</div>
+          <div className="title">Produits</div>
           <div>{cocktails.length}</div>
           <div className="voir-plus">
             <Link to={"/admin/cocktail/index"}>Voir la liste</Link>{" "}

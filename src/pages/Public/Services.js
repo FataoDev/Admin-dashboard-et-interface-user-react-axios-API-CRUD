@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import image from "@/assets/casque.jpg";
 import { cocktailService } from "@/_services/cocktail_service";
 import { Link, useParams } from "react-router-dom";
 
@@ -25,14 +24,7 @@ const Service = () => {
         </Link>
       </div>
       <div className="container_cocktail">
-        <img
-          src={
-            image
-            // 'https://picsum.photos/1200/800?random=' + cocktail.id
-          }
-          alt={cocktail.nom}
-          className="ckt_image"
-        />
+        <img src={cocktail.image} alt={cocktail.nom} className="ckt_image" />
         <div className="description">
           <div className="title">Nom : {cocktail.nom}</div>
           <div>Description : {cocktail.description}</div>

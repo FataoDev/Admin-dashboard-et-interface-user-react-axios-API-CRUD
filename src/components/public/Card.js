@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 import "./card.css";
 
-const Card = ({ Fatao, image }) => {
+const Card = ({ Fatao }) => {
   return (
     <Link to={`/service/${Fatao.id}`} className="card_link">
       <article className="card_article">
-        <img src={image} alt={Fatao.nom} />
+        <img src={Fatao.image} alt={Fatao.nom} />
         <div>{Fatao.nom}</div>
       </article>
     </Link>

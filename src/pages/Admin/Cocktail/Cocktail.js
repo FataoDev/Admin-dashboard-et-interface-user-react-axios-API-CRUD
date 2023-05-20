@@ -44,7 +44,7 @@ const Cocktail = () => {
         Retour
       </Link>
       <br />
-      Cocktail liste
+      Liste des produits
       <table>
         <thead>
           <tr>

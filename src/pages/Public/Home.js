@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { cocktailService } from "@/_services";
 import Card from "@/components/public/Card";
-import image from "@/assets/casque.jpg";
+// import image from "@/assets/casque.jpg";
 
 const Home = () => {
   const [cocktails, setCocktails] = useState([]);
@@ -11,7 +11,9 @@ const Home = () => {
     if (flag.current === false) {
       cocktailService
         .getAllCocktails()
-        .then((res) => setCocktails(res.data.data))
+        .then((res) => {
+          setCocktails(res.data.data);
+        })
         .catch((err) => console.log(err));
     }
 
@@ -27,7 +29,7 @@ const Home = () => {
 
       <div className="home-produits">
         {cocktails.map((ckt, id) => (
-          <Card key={id} Fatao={ckt} image={image} />
+          <Card key={id} Fatao={ckt} />
         ))}
       </div>
     </div>

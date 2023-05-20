@@ -34,16 +34,13 @@ let addCocktail = (cocktail) => {
   // formatData.append("image", cocktail.image);
   // formatData.append("user_id", cocktail.user_id);
 
-  return Axios.put(
-    "http://127.0.0.1:8989/cocktails",
-    cocktail
-    //   , {
-    //     headers: {
-    //       ...headers,
-    //       "Content-Type": "multipart/form-data",
-    //     },
-    //   }
-  );
+  const config = {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  };
+
+  return Axios.put("http://127.0.0.1:8989/cocktails", cocktail, config);
 };
 
 /**

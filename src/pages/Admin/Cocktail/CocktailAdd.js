@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { cocktailService, accountService } from "@/_services";
 
 const CocktailAdd = () => {
-  // const [nom, setNom] = useState("");
-  // const [description, setDescription] = useState("");
-  // const [recette, setRecette] = useState("");
-  // const [image, setImage] = useState("");
+  const [nom, setNom] = useState("");
+  const [description, setDescription] = useState("");
+  const [prix, setPrix] = useState("");
+  const [image, setImage] = useState("");
 
   // const cocktail = {
   //   nom: nom,
@@ -15,54 +15,54 @@ const CocktailAdd = () => {
   //   image: image,
   // };
 
-  const [cocktail, setCocktail] = useState([]);
+  // const [cocktail, setCocktail] = useState([]);
   let navigate = useNavigate();
 
   // Gestionnaire de modification du formulaire
   const onChange = (e) => {
-    // const { name, value, type } = e.target;
-    // if (type === "file") {
-    //   const file = e.target.files[0];
-    //   const reader = new FileReader();
+    const { name, value, type } = e.target;
+    if (type === "file") {
+      const file = e.target.files[0];
+      const reader = new FileReader();
 
-    //   reader.onload = (e) => {
-    //     setImage(e.target.result);
-    //   };
-    //   reader.readAsDataURL(file);
-    // } else {
-    //   if (name === "nom") {
-    //     setNom(value);
-    //   } else {
-    //     if (name === "description") {
-    //       setDescription(value);
-    //     } else {
-    //       if (name === "recette") {
-    //         setRecette(value);
-    //       }
-    //     }
-    //   }
-    // }
+      reader.onload = (e) => {
+        setImage(e.target.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      if (name === "nom") {
+        setNom(value);
+      } else {
+        if (name === "description") {
+          setDescription(value);
+        } else {
+          if (name === "prix") {
+            setPrix(value);
+          }
+        }
+      }
+    }
 
-    setCocktail({
-      ...cocktail,
-      [e.target.name]: e.target.value,
-    });
+    // setCocktail({
+    //   ...cocktail,
+    //   [e.target.name]: e.target.value,
+    // });
   };
 
   // Gestionnaire de soumission du formulaire
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
-    // const cocktail = new FormData();
-    // cocktail.append("nom", nom);
-    // cocktail.append("description", description);
-    // cocktail.append("recette", recette);
-    // cocktail.append("image", image);
-    // console.log(cocktail);
+    const cocktail = new FormData();
+    cocktail.append("nom", nom);
+    cocktail.append("description", description);
+    cocktail.append("prix", prix);
+    cocktail.append("image", image);
 
     let { id } = accountService.getTokenInfo();
 
-    cocktail.user_id = id;
+    // cocktail.user_id = id;
+    cocktail.append("user_id", id);
 
     cocktailService
       .addCocktail(cocktail)
@@ -76,7 +76,7 @@ const CocktailAdd = () => {
         Retour
       </Link>
       <br />
-      Cocktail Add
+      Ajouter un produit
       <form onSubmit={onSubmit}>
         <div className="group">
           <label htmlFor="nom">Nom</label>
@@ -90,7 +90,7 @@ const CocktailAdd = () => {
           <label htmlFor="prix">Prix</label>
           <input type="text" name="prix" onChange={onChange} />
         </div>
-        {/* <div className="group">
+        <div className="group">
           <label htmlFor="">Image :</label>
           <input
             type="file"
@@ -98,7 +98,7 @@ const CocktailAdd = () => {
             name="image"
             onChange={onChange}
           />
-        </div> */}
+        </div>
         <div className="group">
           <button>Ajouter</button>
         </div>
