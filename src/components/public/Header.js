@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./header.css";
 import { accountService } from "@/_services/account_service";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const Header = () => {
   // const [user, setUser] = useState(null);
@@ -63,7 +64,7 @@ const Header = () => {
             {user.prenom} {user.nom}
           </div>
           <div className="name_default" ref={ref_default}>
-            O vision
+            <AccountCircleIcon />
           </div>
         </div>
         <ul ref={toggle_nav}>
