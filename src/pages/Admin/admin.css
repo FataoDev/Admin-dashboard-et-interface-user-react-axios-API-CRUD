@@ -7,17 +7,18 @@
     padding: 0;
 }
 .AHeader{
-    color: #0b54d2;
+    color: white;
+    background-color: #0b54d2;
     padding-left: 30px;
     text-align: center;
     font-weight: 900;
-    line-height: 50px;
-    box-shadow: 5px 5px 5px 5px solid #0b54d2;
+    line-height: 90px;
+    box-shadow: 5px 5px 15px 15px #2f3030;
     display: flex;
     justify-content: space-between;
 }
 #btn-header{
-    position: absolute;
+    /* position: absolute; */
     width: fit-content;
     color: rgb(0, 0, 0);
     font-size: 13px;
@@ -27,7 +28,7 @@
     height: 35px;
     top: 70%;
     border-radius: 10px;
-    margin-right: 15px;
+    margin: 15px 0 0 15px;
     background-color: rgb(224, 219, 219);
     transition: 1s ease;
 }
@@ -43,7 +44,7 @@
     flex-direction: column; */
     padding-left: 15px;
     padding-right: 45px;
-    margin-top: 7%;
+    margin-top: 1%;
     flex-grow: 1;
     height: 85.6vh;
     border-right: solid 1px grey;
@@ -52,7 +53,7 @@
 #admin_body{
     flex-grow: 6;
     padding-left: 25px;
-    margin-top: 7%;
+    margin-top: 6%;
 }
 /* ------------------------------------------------------------------------- */
 
